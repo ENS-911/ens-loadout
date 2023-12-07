@@ -6,7 +6,7 @@ loading.innerText = `LOADING ${clientID}`;
 
 async function portalOpen() {
     try {
-        const response = await fetch(`http://ec2-3-143-219-120.us-east-2.compute.amazonaws.com/client/${clientID}`);
+        const response = await fetch(`http://ec2-3-143-219-120.us-east-2.compute.amazonaws.com:3000/client/${clientID}`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
