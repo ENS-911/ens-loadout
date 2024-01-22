@@ -5,6 +5,7 @@ rootDiv.appendChild(loading);
 loading.innerText = `LOADING ${clientID}`;
 
 let found = ""
+let nwsId = ""
 
 async function portalOpen() {
     console.log(clientID)
@@ -17,7 +18,8 @@ async function portalOpen() {
   
         const data = await response.json();
         console.log('Client Information:', data);
-        found = data;
+        found = data.plan;
+        nwsId = data.nws
         // Handle the retrieved data as needed in your application
         const loaded = document.createElement("h2");
         rootDiv.appendChild(loaded);
